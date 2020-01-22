@@ -18,10 +18,12 @@ const Header = styled.div `
 `
 
 const Title = styled.h1 `
-  // border: black solid 1px;
   margin-left: 20px;
 `
-
+const Img = styled.img `
+  border: solid 1px teal;
+  margin-left: 390px;
+`
 
 class App extends React.Component {
 
@@ -30,9 +32,11 @@ class App extends React.Component {
     return (
       <> 
         <Header>
-          <Title>My GitHub User Card</Title>
+        <Title>My GitHub User Card</Title>
         <Nav />
         </Header>
+        <Img src="http://ghchart.rshah.org/JaxAtwood" alt="JaxAtwood's Github chart" />
+
         <GetData />
         <Route path="/followers" component={GetFollowerData}></Route>
         <Route path="/following" component={GetFollowingData}></Route>
